@@ -1,0 +1,21 @@
+.tile {
+    height: 100px;
+    width: 100px;
+    background-color: gray;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    margin: 10px;
+}
+
+.tile-image {
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
