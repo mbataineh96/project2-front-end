@@ -12,7 +12,7 @@
     margin: 10px;
 }
 
-.tile-inner {
+.tile-inner, .tile-inner-flipped {
     position: relative;
     width: 100%;
     height: 100%;
@@ -21,11 +21,11 @@
     transform-style: preserve-3d;
   }
 
-  /*.tile:hover .tile-image {
+  /*.tile:hover .tile-inner {
       transform: scale(1.2, 1.2);
   }*/
 
-  .tile:active .tile-inner {
+  .tile-inner-flipped {
     transform: rotateY(180deg);
   }
 
@@ -33,19 +33,17 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+    /*-webkit-backface-visibility: hidden;
+    backface-visibility: hidden;*/
   }
   
   .tile-back {
-    background-color: #bbb;
-    color: black;
+    background-color: purple;
     border-radius: 10px;
   }
   
   .tile-front {
-    background-color: #555;
-    color: white;
+    background-color: whitesmoke;
     border-radius: 10px;
     transform: rotateY(180deg);
   }
@@ -60,4 +58,5 @@
     border-radius: 10px;
 
     transition-duration: 1s;
+    transition: transform .4s;
 }
